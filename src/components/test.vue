@@ -148,7 +148,7 @@
       function setup() {
         ctx.fillStyle = 'rgba(55,55,55,1)';
         ctx.fillRect(0, 0, width, height);
-        while (balls.length < 11) {
+        while (balls.length <= 10) {
           var ball;
           if (balls.length === 0) {
             ball = new Ball(2 * unit);
@@ -159,7 +159,6 @@
         }
         for (let i = 0; i < balls.length; i++) {
           balls[i].draw();
-          balls[i].update();
         }
       }
 
