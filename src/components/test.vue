@@ -12,7 +12,7 @@
           animation: null
       }
     },
-    props: ["cross"],
+    props: ["cross", "modifiers"],
 
     mounted() {
       // setup canvas
@@ -137,7 +137,9 @@
 
       // define array to store balls
 
-      var balls = [];
+      var balls1 = [];
+      var balls2 = [];
+      var balls3 = [];
 
       // define loop that keeps drawing the scene constantly
       var thing = new Thing(unit * 2);
@@ -145,20 +147,39 @@
 
       var cross = this.cross;
 
-      function setup() {
+      function setup(modifiers) {
         ctx.fillStyle = 'rgba(55,55,55,1)';
         ctx.fillRect(0, 0, width, height);
-        while (balls.length <= 10) {
-          var ball;
-          if (balls.length === 0) {
-            ball = new Ball(2 * unit);
-          } else {
-            ball = new Ball(unit)
-          }
-          balls.push(ball);
+        while (balls1.length < 3) {
+          balls1.push(new Ball(unit * modifiers[0]));
         }
-        for (let i = 0; i < balls.length; i++) {
-          balls[i].draw();
+        while (balls2.length < 3) {
+          balls2.push(new Ball(unit * modifiers[1]));
+        }
+        while (balls3.length < 3) {
+          balls3.push(new Ball(unit * modifiers[2]));
+        }
+        drawAllBalls(false);
+      }
+
+      function drawAllBalls(update) {
+        for (let i = 0; i < balls1.length; i++) {
+          balls1[i].draw();
+          if (update) {
+            balls1[i].update();
+          }
+        }
+        for (let i = 0; i < balls2.length; i++) {
+          balls2[i].draw();
+          if (update) {
+            balls2[i].update();
+          }
+        }
+        for (let i = 0; i < balls3.length; i++) {
+          balls3[i].draw();
+          if (update) {
+            balls3[i].update();
+          }
         }
       }
 
@@ -168,10 +189,7 @@
         ctx.fillRect(0, 0, width, height);
         var trialCurrentTime = new Date().getTime();
 
-        for (let i = 0; i < balls.length; i++) {
-          balls[i].draw();
-          balls[i].update();
-        }
+        drawAllBalls(true);
 
         if ((cross) && (trialCurrentTime - trialStartTime >= 1000)) {
           thing.draw();
@@ -181,7 +199,7 @@
         _this.animation = requestAnimationFrame(loop);
       }
 
-      setup();
+      setup(this.modifiers);
       setTimeout(function () {
         trialStartTime = new Date().getTime();
         loop();
