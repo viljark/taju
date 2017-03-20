@@ -5,12 +5,25 @@
 </template>
 
 <script>
-
+  import screenfull from "screenfull";
   export default {
     name: 'app',
     data: function() {
         return {
         }
+    },
+    mounted: function() {
+      document.addEventListener("keydown", function (e) {
+        console.log(e.keyCode);
+        if (e.keyCode == 13) {
+            console.log(screenfull.enabled, screenfull);
+
+          if (screenfull.enabled) {
+            screenfull.toggle()
+          }
+        }
+      }, false);
+
     },
     methods: {
     }

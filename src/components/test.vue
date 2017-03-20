@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas ref="canvas"></canvas>
+    <canvas  ref="canvas"></canvas>
   </div>
 </template>
 
@@ -160,8 +160,13 @@
           balls3.push(new Ball(unit * modifiers[2]));
         }
         drawAllBalls(false);
+        setTimeout(showPrompt, 500);
       }
-
+      function showPrompt() {
+        alert("Ala kõrgus: " + height +
+               "\nAla laius: " + width +
+               "\nÜhik: " + unit);
+      }
       function drawAllBalls(update) {
         for (let i = 0; i < balls1.length; i++) {
           balls1[i].draw();
@@ -204,31 +209,8 @@
         trialStartTime = new Date().getTime();
         loop();
       }, 2000)
-
-
-      document.addEventListener("keydown", function (e) {
-        if (e.keyCode == 13) {
-          toggleFullScreen();
-        }
-      }, false);
-
-      function toggleFullScreen() {
-        if (!document.fullscreenElement && !document.mozFullscreenElement && !document.webkitFullscreenElement) {
-          if (canvas.requestFullScreen)
-            canvas.requestFullScreen();
-          else if (canvas.webkitRequestFullScreen)
-            canvas.webkitRequestFullScreen();
-          else if (canvas.mozRequestFullScreen)
-            canvas.mozRequestFullScreen();
-        } else {
-          if (document.exitFullscreen) {
-            document.exitFullscreen();
-          }
-        }
-      }
     },
     methods: {
-
     },
     destroyed() {
         console.log("destroyed");
