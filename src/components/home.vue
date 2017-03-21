@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{$t("hello")}}</h1>
+    <p>Language / Keel</p>
     <label>{{$t("chooseLanguage")}}
       <select v-model="language" @change="updateLanguage">
         <option value="et">Estonian</option>

@@ -163,9 +163,14 @@
         setTimeout(showPrompt, 500);
       }
       function showPrompt() {
-        alert("Ala kõrgus: " + height +
+        alert( "Allpool näed numbreid. Kirjuta üles Ala kõrgus ja Ala laius." +
+               "\nMõõda joonlauaga kolme erineva suurusega palli läbimõõt." +
+               "\nSelleks võid seda kasti liigutada. Kui palle ei saa mõõta kliki OK ja klaviatuuril F5 " +
+               "\nAla kõrgus: " + height +
                "\nAla laius: " + width +
-               "\nÜhik: " + unit);
+               "\nÜhik: " + unit +
+               "\nSaada üleskirjutatud tekst mulle tagasi." +
+               "\nKui tehtud, võid lehe kinni panna, saan nüüd edasi ehitada.");
       }
       function drawAllBalls(update) {
         for (let i = 0; i < balls1.length; i++) {

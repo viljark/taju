@@ -1,6 +1,6 @@
 <template>
   <div>
-    <test :cross="false" :modifiers="[1, 2, 3]"></test>
+    <test :cross="false" :modifiers="[1, 5, 10]"></test>
   </div>
 </template>
 

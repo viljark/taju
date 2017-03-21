@@ -8,7 +8,7 @@ let locales = {
     dunno: "Ei tea",
     years: "aastat",
     joke: {
-      1: "Mees läks baari tükk asfaldi kaenlas",
+      1: "Mees läks baari, tükk asfaldi kaenlas",
       2: "Kaks õlut!: ütles ta baaripidajale",
       3: "Üks mulle ja üks teepeale."
     },
