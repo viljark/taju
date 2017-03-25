@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>cross {{crossVisible}}</p>
     <tutorial :key="$route.path" v-if="!testActive" @next="testActive = true" :size="crossSize"></tutorial>
     <test :key="$route.path" v-if="testActive" :cross="crossVisible" @data="parseTestResults" :cross-size="crossSize"
           :modifiers="currentModifier"></test>
@@ -18,7 +19,7 @@
         testActive: false,
         id: Number.parseInt(this.$route.params.id),
         currentModifier: [],
-        crossVisible: true,
+        crossVisible: false,
         crossSize: 0
       }
     },
@@ -30,6 +31,11 @@
       //change cross size here
       this.crossSize = this.currentModifier[0];
 
+      if (this.id === 3 || this.id === 6) {
+        this.crossVisible = true;
+      } else {
+        this.crossVisible = false;
+      }
     },
     methods: {
       parseTestResults(runData) {
@@ -61,6 +67,12 @@
       },
       startRun(id) {
         this.testActive = false;
+
+        if (this.id === 3 || this.id === 6) {
+            this.crossVisible = true;
+        } else {
+            this.crossVisible = false;
+        }
         this.$router.push({name: 'run', params: {id: id}});
         this.id = id;
       },
