@@ -12,9 +12,12 @@
           animation: null
       }
     },
-    props: ["cross", "modifiers"],
+    props: ["cross", "modifiers", "crossSize"],
 
     mounted() {
+      var _this = this;
+
+      var animationDuration = 1; //in seconds
       // setup canvas
       var canvas = document.querySelector('canvas');
       var ctx = canvas.getContext('2d');
@@ -22,6 +25,8 @@
       var height = canvas.height = window.innerHeight;
       var width = canvas.width = height * 1.2;
       var unit = Math.floor(height / 100);
+
+      var speedUnit = unit / 2;
       console.log("unit is", unit);
       // function to generate random number
 
@@ -48,7 +53,12 @@
         ctx.beginPath();
         ctx.fillStyle = this.color;
         ctx.rect(this.x, this.y, this.size / 3, this.size);
-        ctx.rect(this.x - this.size / 3, this.y + this.size / 3, this.size, this.size / 3);
+        ctx.rect(
+          this.x - this.size / 3,
+          this.y + this.size / 3,
+          this.size,
+          this.size / 3
+        );
         ctx.fill();
       };
       // define ball draw method
@@ -59,20 +69,20 @@
 
       function Ball(size) {
         this.collisions = 0;
-        this.speedSwitchTime = Math.floor(((Math.random() * 300) + 100) * 10)
+        this.speedSwitchTime = Math.floor(((Math.random() * 300) + 100) * 10);
         this.newSpeedStartTime = new Date().getTime();
         this.size = size;
         this.x = random(this.size * 2, width - this.size * 2);
         this.y = random(this.size * 2, height - this.size * 2);
-        this.velX = random(-unit, unit);
-        this.velY = random(-unit, unit);
+        this.velX = random(-speedUnit, speedUnit);
+        this.velY = random(-speedUnit, speedUnit);
 
         //we don't want still objects
         if (this.velX == 0) {
-          this.velX = random(1, unit)
+          this.velX = random(1, speedUnit)
         }
         if (this.velY == 0) {
-          this.velY = random(-unit, -1)
+          this.velY = random(-speedUnit, -1)
         }
         this.color = '#1ce';
       }
@@ -80,7 +90,7 @@
       Ball.prototype.draw = function () {
         ctx.beginPath();
         ctx.fillStyle = this.color;
-        ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+        ctx.arc(this.x, this.y, this.size / 2, 0, 2 * Math.PI);
         ctx.fill();
         ctx.fillStyle = 'white';
         ctx.font = '18px serif';
@@ -93,22 +103,22 @@
       Ball.prototype.update = function () {
         var currentCollisions = this.collisions;
 
-        if ((this.x + this.size) >= width) {
+        if ((this.x + this.size / 2) >= width) {
           this.velX = -(this.velX);
           this.collisions++;
         }
 
-        if ((this.x - this.size) <= 0) {
+        if ((this.x - this.size / 2) <= 0) {
           this.velX = -(this.velX);
           this.collisions++;
         }
 
-        if ((this.y + this.size) >= height) {
+        if ((this.y + this.size / 2) >= height) {
           this.velY = -(this.velY);
           this.collisions++;
         }
 
-        if ((this.y - this.size) <= 0) {
+        if ((this.y - this.size / 2) <= 0) {
           this.velY = -(this.velY);
           this.collisions++;
         }
@@ -121,8 +131,9 @@
             this.newSpeedStartTime = new Date().getTime();
 
             // change the movement direction, but keep the general direction same
-            this.velY = random(unit / 3, unit) * Math.sign(this.velY);
-            this.velX = random(unit / 3, unit) * Math.sign(this.velX);
+
+            this.velY = random(speedUnit / 2, speedUnit) * Math.sign(this.velY);
+            this.velX = random(speedUnit / 2, speedUnit)  * Math.sign(this.velX);
 //          if (Math.random()*10 > 5) {
 //            this.dX *= -1
 //          }
@@ -142,7 +153,7 @@
       var balls3 = [];
 
       // define loop that keeps drawing the scene constantly
-      var thing = new Thing(unit * 2);
+      var thing = new Thing(unit * this.crossSize);
       var trialStartTime;
 
       var cross = this.cross;
@@ -160,18 +171,27 @@
           balls3.push(new Ball(unit * modifiers[2]));
         }
         drawAllBalls(false);
-        setTimeout(showPrompt, 500);
       }
+
       function showPrompt() {
-        alert( "Allpool näed numbreid. Kirjuta üles Ala kõrgus ja Ala laius." +
-               "\nMõõda joonlauaga kolme erineva suurusega palli läbimõõt." +
-               "\nSelleks võid seda kasti liigutada. Kui palle ei saa mõõta kliki OK ja klaviatuuril F5 " +
-               "\nAla kõrgus: " + height +
-               "\nAla laius: " + width +
-               "\nÜhik: " + unit +
-               "\nSaada üleskirjutatud tekst mulle tagasi." +
-               "\nKui tehtud, võid lehe kinni panna, saan nüüd edasi ehitada.");
-      }
+          var response = prompt("Mitu põrget lugesid?");
+          if (!response || response.trim().length === 0) {
+              showPrompt();
+              return;
+          }
+
+          var collisions = 0;
+          balls1.forEach(function (ball) {
+            collisions += ball.collisions;
+          });
+
+          _this.$emit("data", {
+            collisionsReal: collisions,
+            collisionsCounted: response
+          });
+
+      };
+
       function drawAllBalls(update) {
         for (let i = 0; i < balls1.length; i++) {
           balls1[i].draw();
@@ -193,8 +213,8 @@
         }
       }
 
-      let _this = this;
       function loop() {
+        var now = new Date().getTime();
         ctx.fillStyle = 'rgba(55,55,55,1)';
         ctx.fillRect(0, 0, width, height);
         var trialCurrentTime = new Date().getTime();
@@ -205,8 +225,14 @@
           thing.draw();
           thing.update();
         }
-
-        _this.animation = requestAnimationFrame(loop);
+        if (now - trialStartTime > 1000 * animationDuration) {
+          ctx.fillStyle = 'rgba(55,55,55,1)';
+          ctx.fillRect(0, 0, width, height);
+          window.cancelAnimationFrame(_this.animation);
+          setTimeout(showPrompt, 100);
+        } else {
+          _this.animation = requestAnimationFrame(loop);
+        }
       }
 
       setup(this.modifiers);
