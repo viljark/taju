@@ -1,4 +1,6 @@
 import Firebase from 'firebase'
+import uuid from "uuid";
+
 // Initialize Firebase
 let config = {
   apiKey: "AIzaSyAX8t4SHSp-dcYpi_McXcToIS44Dkqzf88",
@@ -17,6 +19,8 @@ let store = {
     let plain = Object.assign({}, answer);
 
     delete plain[".key"];
+    plain.id = uuid.v4();
+    plain.date = new Date().toISOString();
 
     db.ref('answers/' + plain.id).set(plain)
   }

@@ -35,9 +35,7 @@
       },
       send() {
         let answer = {
-          id: uuid.v4(),
-          text: this.answer,
-          date: new Date().getTime()
+
         };
         store.addAnswer(answer)
       }

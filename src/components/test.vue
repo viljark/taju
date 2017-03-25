@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas  ref="canvas"></canvas>
+    <canvas ref="canvas"></canvas>
   </div>
 </template>
 
@@ -32,9 +32,6 @@
 
       function random(min, max) {
         var num = Math.floor(Math.random() * (max - min)) + min;
-//        if (num === 0) {
-//          num = 2;
-//        }
         return num;
       }
 
@@ -187,7 +184,8 @@
 
           _this.$emit("data", {
             collisionsReal: collisions,
-            collisionsCounted: response
+            collisionsCounted: Number.parseInt(response),
+            cross: _this.cross
           });
 
       };
@@ -253,7 +251,4 @@
 </script>
 
 <style>
-  body {
-    overflow: hidden;
-  }
 </style>
