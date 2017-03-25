@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>cross {{crossVisible}}</p>
     <tutorial :key="$route.path" v-if="!testActive" @next="testActive = true" :size="crossSize"></tutorial>
     <test :key="$route.path" v-if="testActive" :cross="crossVisible" @data="parseTestResults" :cross-size="crossSize"
           :modifiers="currentModifier"></test>
@@ -23,7 +22,7 @@
         crossSize: 0
       }
     },
-    created: function () {
+    mounted: function () {
       console.log("route params", this.$route.params.id);
       this.currentModifier = this.getRandomModifier();
       console.log("currentModifier", this.currentModifier)
@@ -68,7 +67,7 @@
       startRun(id) {
         this.testActive = false;
 
-        if (this.id === 3 || this.id === 6) {
+        if (id === 3 || id === 6) {
             this.crossVisible = true;
         } else {
             this.crossVisible = false;
