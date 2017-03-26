@@ -22,7 +22,7 @@
         crossSize: 0
       }
     },
-    mounted: function () {
+    created: function () {
       console.log("route params", this.$route.params.id);
       this.currentModifier = this.getRandomModifier();
       console.log("currentModifier", this.currentModifier)
@@ -53,6 +53,7 @@
         }
         if (this.id !== 3) {
           this.startRun(this.id + 1);
+          return;
         }
         if (this.id === 3) {
           //remove current modifier from modifiers
