@@ -12,14 +12,82 @@
             <option value="Tahvelarvuti">{{$t("answerRaal.14")}}</option>
           </select>
         </p>
-      <p v-if="vastus.device !== null">
+        <p>{{$t("questionRaal.2")}}</p>
+        <p>
+          <input v-model="vastus.deviceAge" name="" value=""> {{$t("answerRaal.21")}}
+       </p>
+        <p>{{$t("questionRaal.3")}}</p>
+        <p>
+          <input v-model="vastus.diagonal" name="" value=""> {{$t("answerRaal.31")}}
+       </p>
+        <p>{{$t("questionRaal.4")}}</p>
+        <p>
+          <select v-model="vastus.widescreen" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="Jah">{{$t("answerRaal.41")}}</option>
+            <option value="Ei">{{$t("answerRaal.42")}}</option>
+          </select>
+      <p v-if="vastus.device !== null && vastus.deviceAge !== null && vastus.diagonal !== null
+      && vastus.widescreen !== null">
         <button @click="step = 2">{{$t("forward")}}</button>
       </p>
     </section>
-    <p>
-      <button @click="saveData">{{$t("forward")}}</button>
-    </p>
+    <section v-if="step == 2">
+        <p>{{$t("questionKI.1")}}</p>
+        <p>
+          <input v-model="vastus.KIAge" name="" value=""> {{$t("answerKI.11")}}
+       </p>
+       <p>{{$t("questionKI.2")}}</p>
+          <select v-model="vastus.gender" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="Naine">{{$t("answerKI.21")}}</option>
+            <option value="Mees">{{$t("answerKI.22")}}</option>
+          </select>
+       <p>{{$t("questionKI.3")}}</p>
+          <select v-model="vastus.vision" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="Jah">{{$t("answerKI.31")}}</option>
+            <option value="Ei">{{$t("answerKI.32")}}</option>
+          </select>       
+       <p>{{$t("questionKI.4")}}</p>
+          <select v-model="vastus.haridus" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="1">{{$t("answerKI.41")}}</option>
+            <option value="2">{{$t("answerKI.42")}}</option>
+            <option value="3">{{$t("answerKI.43")}}</option>
+            <option value="4">{{$t("answerKI.44")}}</option>
+            <option value="5">{{$t("answerKI.45")}}</option>
+            <option value="6">{{$t("answerKI.46")}}</option>
+          </select>      
+       <p>{{$t("questionKI.5")}}</p>
+          <select v-model="vastus.ktr" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="1">{{$t("answerKI.51")}}</option>
+            <option value="2">{{$t("answerKI.52")}}</option>
+            <option value="3">{{$t("answerKI.53")}}</option>
+            <option value="4">{{$t("answerKI.54")}}</option>
+            <option value="5">{{$t("answerKI.55")}}</option>
+          </select>
+        <p v-if="vastus.KIAge !== null && vastus.gender !== null && vastus.vision !== null
+          && vastus.haridus !== null  && vastus.ktr !== null">
+          <button @click="step = 3">{{$t("forward")}}</button></p>
+    </section>
+    <section v-if="step == 3">            
+       <p>{{$t("questionKI.5")}}</p>
+          <select v-model="vastus.ktrcheck" name="" id="">
+            <option selected value="null" disabled>--- Vali -----</option>
+            <option value="1">{{$t("answerKI.51")}}</option>
+            <option value="2">{{$t("answerKI.52")}}</option>
+            <option value="3">{{$t("answerKI.53")}}</option>
+            <option value="4">{{$t("answerKI.54")}}</option>
+            <option value="5">{{$t("answerKI.55")}}</option>
+          </select>
+        <p v-if="vastus.krtcheck !== null">
+          <button @click="saveData">{{$t("forward")}}</button>
+        </p>
+    </section>
   </div>
+  
 </template>
 
 <script>
@@ -32,6 +100,14 @@
           step: 1,
           vastus: {
             device: null,
+            deviceAge: null,
+            diagonal: null,
+            widescreen: null,
+            KIAge: null,
+            gender: null,
+            haridus: null,
+            ktr: null,
+            ktrcheck: null
 
           }
       }
