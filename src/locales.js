@@ -100,7 +100,9 @@ let locales = {
       54: "987",
       55: "023"
     },
-    answerTest: "446"
+    answerTest: "446",
+    sawit: "Järgnevalt saad täpsustada mida nägid.",
+    sawitnot: "Isegi kui sa midagi ei märganud, proovi pakkuda mis see olla võis. "
 
     
   },
@@ -205,7 +207,13 @@ let locales = {
       54: "987",
       55: "023"
     },
-    answerTest: "446"
+    answerTest: "446",
+    sawit: "Describe what you saw.",
+    sawitnot: "Even if you didn't see anyting, try to guess."
+
+    
+
+
 
 
   }
