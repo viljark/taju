@@ -100,9 +100,16 @@ let locales = {
       54: "987",
       55: "023"
     },
+
     answerTest: "446",
     sawit: "Järgnevalt saad täpsustada mida nägid.",
-    sawitnot: "Isegi kui sa midagi ei märganud, proovi pakkuda mis see olla võis. "
+    sawitnot: "Isegi kui sa midagi ei märganud, proovi pakkuda mis see olla võis. ",
+    endspeech: {
+      1: "Täname, et osalesid tajukatses. "
+  
+    }
+    
+
 
     
   },
@@ -209,8 +216,10 @@ let locales = {
     },
     answerTest: "446",
     sawit: "Describe what you saw.",
-    sawitnot: "Even if you didn't see anyting, try to guess."
-
+    sawitnot: "Even if you didn't see anyting, try to guess.",
+    endspeech: {
+      1: "Thank you for participating in the experiment.",
+    }
     
 
 
