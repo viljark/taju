@@ -30,7 +30,7 @@ let locales = {
     questionKI: {
       1: "Vanus",
       2: "Sugu",
-      3: "Kas sul on normaalne nägemine kui ei, siis kas kandsid katse ajal prille või läätsi?",  //sõnastus
+      3: "Vali JAH - kui sul on normaalne nägemine või kandsid prille/ läätsi. Vali EI - kui peaksid kandma prille, kuid ei kandnud.",  //sõnastus
       4: "Haridus",
       5: "Vali keskmine number"
     },
@@ -86,7 +86,7 @@ let locales = {
 
       31: "Jah",
       32: "Ei",
-
+           
       41: "Põhiharidus",         // tarvis täpsustada.
       42: "Keskharidus",
       43: "Kesk-eriharidus",
@@ -104,10 +104,29 @@ let locales = {
     answerTest: "446",
     sawit: "Järgnevalt saad täpsustada mida nägid.",
     sawitnot: "Isegi kui sa midagi ei märganud, proovi pakkuda mis see olla võis. ",
+    alert: {
+      1: "Mitu põrget lugesid?",
+      2: "Väga hea. Jätkamiseks vajuta OK!",
+      3: "Su täpsus pole veel piisav. Suuname Su harjutusse tagasi, et saaksid veel proovida."
+    },
+    tutorial: {
+      1: "Ülesanne",
+      2: "Järgmisel lehel kuvatakse sinu ette hall kast liikuvate pallidega. " +
+      "Sinu ülesanne on kolme erineva suurusega pallide hulgast jälgida just sellise suurusega palle.",
+      3: "Sa pead lugema, mitu korda nad põrkuvad vastu kasti seinu. Katse lõpus küsitakse sinult seda numbrit."
+    },
     endspeech: {
       1: "Täname, et osalesid tajukatses. "
-  
+    },
+    informed: {
+      1: "Informeeritud nõusolek",
+      2: "Käesoleva eksperimendi eesmärk on uurida katseisiku tähelepanu ja taju erinevas" +
+      "suuruses objektide jälgmisel.",
+      3: "See eksperiment nõuab Sinult 10 minutit Su aega",
+      4: "Sa võid iga hetk katses osalemise katkestada.",
+      5: "See eksperiment viiakse läbi seminaritöö raames."
     }
+
     
 
 
@@ -138,7 +157,7 @@ let locales = {
     questionRaal: {
       1: "What type of device are you using to run this experiment?",
       2: "How old is the computer you are using approximately?",
-      3: "What is the approximate diagonal size of your computer monitor in inche?. Type Don't know, if you don't.", //kas siin saab kuidagi Ei tea jutumärkidesse panna?
+      3: "What is the approximate diagonal size of your computer monitor in inches?. Type 'Don't know', if you don't know.", //kas siin saab kuidagi Ei tea jutumärkidesse panna?
       4: "Is your computer monitor a widescreen monitor?",
     },
     questionKI: {
@@ -217,8 +236,27 @@ let locales = {
     answerTest: "446",
     sawit: "Describe what you saw.",
     sawitnot: "Even if you didn't see anyting, try to guess.",
+    alert: {
+      1: "How many bounces did you count?",
+      2: "Very good, press OK to continue.",
+      3: "Your accuracy wasn't enough. We'll get you back to the tutorial so you can try again."
+    },
+    tutorial: {
+      1: "Task",
+      2: "In the next page you will be shown a grey box with moving and bouncing balls. " +
+      "Your task is to follow this particular size of balls from three different sizes.",
+      3: "You have to count the bounces the balls with this particular size make from the walls of the box."
+    },
     endspeech: {
-      1: "Thank you for participating in the experiment.",
+      1: "Thank you for participating in this experiment. "
+    },
+    informed: {  // inglisekeelne informeeritud nõusolek
+      1: "Informeeritud nõusolek",
+      2: "Käesoleva eksperimendi eesmärk on uurida katseisiku tähelepanu ja taju erinevas" +
+      "suuruses objektide jälgmisel.",
+      3: "See eksperiment nõuab Sinult 10 minutit Su aega",
+      4: "Sa võid iga hetk katses osalemise katkestada.",
+      5: "See eksperiment viiakse läbi seminaritöö raames."
     }
     
 

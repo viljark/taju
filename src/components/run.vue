@@ -45,7 +45,7 @@
         data.addRunData(runData);
 //      this.$t("hello") nii saab tõlkida
 
-        alert(" Tubli, jätkamiseks vajuta OK!");
+        alert(this.$t("alert.2"));
         console.log(this.id);
         if (this.id === 6) {
           this.$router.push({name: 'survey1', params: {visited: true}});

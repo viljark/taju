@@ -1,13 +1,13 @@
 <template>
   <div class="wrap">
-    <h1>Tutorial</h1>
-    <p>Sisu</p>
-    <p>Sellise suurusega pallide põrkeid loe!</p>
+    <h1>{{$t("tutorial.1")}}</h1>
+    <p>{{$t("tutorial.2")}}</p>
+    <p>{{$t("tutorial.3")}}</p>
     <div>
       <span ref="ball" class="ball" :style="{width: ballSize, height: ballSize}"></span>
     </div>
     <p>
-      <button @click="next">Jätka</button>
+      <button @click="next">{{$t("forward")}}</button>
     </p>
   </div>
 </template>

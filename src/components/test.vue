@@ -171,7 +171,7 @@
       }
 
       function showPrompt() {
-          var response = prompt("Mitu põrget lugesid?");
+          var response = prompt(_this.$t("alert.1"));
           if (!response || response.trim().length === 0) {
               showPrompt();
               return;

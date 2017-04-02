@@ -27,10 +27,10 @@
         console.log("int counted", counted);
 
         if (Math.abs(trialData.collisionsCounted - trialData.collisionsReal) <= this.allowedMargin) {
-          alert("Tubli, jätkamiseks vajuta OK!");
+          alert(this.$t("alert.2"));
           this.$router.push({name: 'run', params: {id: 1}});
         } else {
-          alert("Sa tegid halvasti, suuname sind õpetuse juurde tagasi!");
+          alert(this.$t("alert.3"));
           this.$router.push({path: 'step2'});
         }
         trialData.name = "trial";
