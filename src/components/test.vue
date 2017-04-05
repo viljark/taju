@@ -72,7 +72,7 @@
         this.y = random(this.size * 2, height - this.size * 2);
         this.velX = random(-speedUnit, speedUnit);
         this.velY = random(-speedUnit, speedUnit);
-
+        this.counterVisible = false;
         //we don't want still objects
         if (this.velX == 0) {
           this.velX = random(1, speedUnit)
@@ -88,9 +88,14 @@
         ctx.fillStyle = this.color;
         ctx.arc(this.x, this.y, this.size / 2, 0, 2 * Math.PI);
         ctx.fill();
-        ctx.fillStyle = 'white';
-        ctx.font = '18px serif';
-        ctx.fillText(this.collisions, this.x + this.size, this.y);
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = '#000';
+        ctx.stroke();
+        if (this.counterVisible) {
+          ctx.fillStyle = 'white';
+          ctx.font = '18px serif';
+          ctx.fillText(this.collisions, this.x + this.size / 2, this.y);
+        }
 
       };
 
@@ -158,7 +163,9 @@
         ctx.fillStyle = 'rgba(55,55,55,1)';
         ctx.fillRect(0, 0, width, height);
         while (balls1.length < 3) {
-          balls1.push(new Ball(unit * modifiers[0]));
+          let ball = new Ball(unit * modifiers[0]);
+          ball.counterVisible = true;
+          balls1.push(ball);
         }
         while (balls2.length < 3) {
           balls2.push(new Ball(unit * modifiers[1]));
@@ -216,12 +223,15 @@
         ctx.fillRect(0, 0, width, height);
         var trialCurrentTime = new Date().getTime();
 
-        drawAllBalls(true);
-
+        //draw cross under the circles
         if ((cross) && (trialCurrentTime - trialStartTime >= 1000)) {
           thing.draw();
           thing.update();
         }
+
+        drawAllBalls(true);
+
+
         if (now - trialStartTime > 1000 * animationDuration) {
           ctx.fillStyle = 'rgba(55,55,55,1)';
           ctx.fillRect(0, 0, width, height);
