@@ -25,12 +25,8 @@
     },
     created: function () {
       console.log("route params", this.$route.params.id);
-      this.currentModifier = this.getRandomModifier();
-      console.log("currentModifier", this.currentModifier)
 
-      //change cross size here
-      this.crossSize = this.currentModifier[3];
-      this.stimulusSize = this.currentModifier[0];
+      this.initModifiers()
 
       if (this.id === 3 || this.id === 6) {
         this.crossVisible = true;
@@ -43,7 +39,7 @@
         runData.name = "run" + this.id;
         runData.crossSize = this.crossSize;
         runData.modifiers = this.currentModifier;
-
+        runData.stimulusSize = this.stimulusSize;
         data.addRunData(runData);
 //      this.$t("hello") nii saab tõlkida
 
@@ -54,6 +50,7 @@
           return;
         }
         if (this.id !== 3) {
+          this.initModifiers();
           this.startRun(this.id + 1);
           return;
         }
@@ -77,6 +74,14 @@
         }
         this.$router.push({name: 'run', params: {id: id}});
         this.id = id;
+      },
+      initModifiers() {
+        this.currentModifier = this.getRandomModifier();
+        console.log("currentModifier", this.currentModifier)
+
+        //change cross size here
+        this.crossSize = this.currentModifier[3];
+        this.stimulusSize = this.currentModifier[0];
       },
       getRandomModifier() {
         return modifiers[this.random(0, modifiers.length)];
