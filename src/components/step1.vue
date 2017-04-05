@@ -24,8 +24,6 @@
     methods: {
     }
   }
-
-  
 </script>
 
 <style scoped>

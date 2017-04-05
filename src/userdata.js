@@ -17,13 +17,13 @@ let data = {
     return this.state;
   }
 };
-
+// 1. jälgitav, 2. ja 3. segajad ja 4. risti suurus
 let modifiers = [
-  [1, 2, 3],
-  [2, 4, 5],
-  [3, 6, 7],
-  [4, 2, 10],
-  [5, 2, 10]
+  [30, 20, 10, 6],
+  [18, 26, 10, 6],
+  [20, 12, 30, 20],
+  [24, 5, 14, 42],
+  [6, 16, 24, 30]
 ];
 
 export {data, modifiers};

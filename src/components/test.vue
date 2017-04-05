@@ -27,7 +27,6 @@
       var unit = Math.floor(height / 100);
 
       var speedUnit = unit / 2;
-      console.log("unit is", unit);
       // function to generate random number
 
       function random(min, max) {
@@ -40,7 +39,7 @@
       function Thing(size) {
         this.x = width;
         this.y = height / 2;
-        this.velX = -unit;
+        this.velX = -unit / 1.5;
         this.velY = 0;
         this.color = "rgb(255, 0, 0)";
         this.size = size;

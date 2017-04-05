@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tutorial :key="$route.path" v-if="!testActive" @next="testActive = true" :size="crossSize"></tutorial>
+    <tutorial :key="$route.path" v-if="!testActive" @next="testActive = true" :size="stimulusSize"></tutorial>
     <test :key="$route.path" v-if="testActive" :cross="crossVisible" @data="parseTestResults" :cross-size="crossSize"
           :modifiers="currentModifier"></test>
   </div>
@@ -19,7 +19,8 @@
         id: Number.parseInt(this.$route.params.id),
         currentModifier: [],
         crossVisible: false,
-        crossSize: 0
+        crossSize: 0,
+        stimulusSize: 0
       }
     },
     created: function () {
@@ -28,7 +29,8 @@
       console.log("currentModifier", this.currentModifier)
 
       //change cross size here
-      this.crossSize = this.currentModifier[0];
+      this.crossSize = this.currentModifier[3];
+      this.stimulusSize = this.currentModifier[0];
 
       if (this.id === 3 || this.id === 6) {
         this.crossVisible = true;
