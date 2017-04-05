@@ -1,7 +1,9 @@
 <template>
   <div>
-    <h1>The End</h1>
+    <h1>{{$t("endspeech.3")}}</h1>
     <p>{{$t("endspeech.1")}}</p>
+    <p>{{$t("endspeech.2")}}</p>
+    <p>Võimalik tagasiside koht katseisikule. Nt kuidas ta põrkeid luges</p>
   </div>
 </template>
 

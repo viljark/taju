@@ -17,7 +17,7 @@
     mounted() {
       var _this = this;
 
-      var animationDuration = 1; //in seconds
+      var animationDuration = 12; //in seconds
       // setup canvas
       var canvas = document.querySelector('canvas');
       var ctx = canvas.getContext('2d');

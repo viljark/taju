@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1>Survey 2</h1>
+    <h1>{{$t("survey")}}</h1>
     <section v-if="step == 1">
         <p>{{$t("questionRaal.1")}}</p>
         <p>
           <select v-model="vastus.device" name="" id="">
-            <option selected value="null" disabled>--- Vali -----</option>
+            <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Sülearvuti">{{$t("answerRaal.11")}}</option>
             <option value="Lauaarvuti">{{$t("answerRaal.12")}}</option>
             <option value="Nutitelefon">{{$t("answerRaal.13")}}</option>
@@ -23,7 +23,7 @@
         <p>{{$t("questionRaal.4")}}</p>
         <p>
           <select v-model="vastus.widescreen" name="" id="">
-            <option selected value="null" disabled>--- Vali -----</option>
+            <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerRaal.41")}}</option>
             <option value="Ei">{{$t("answerRaal.42")}}</option>
           </select>
@@ -39,19 +39,19 @@
        </p>
        <p>{{$t("questionKI.2")}}</p>
           <select v-model="vastus.gender" name="" id="">
-            <option selected value="null" disabled>--- Vali -----</option>
+            <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Naine">{{$t("answerKI.21")}}</option>
             <option value="Mees">{{$t("answerKI.22")}}</option>
           </select>
        <p>{{$t("questionKI.3")}}</p>
           <select v-model="vastus.vision" name="" id="">
-            <option selected value="null" disabled>--- Vali -----</option>
+            <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerKI.31")}}</option>
             <option value="Ei">{{$t("answerKI.32")}}</option>
           </select>       
        <p>{{$t("questionKI.4")}}</p>
           <select v-model="vastus.haridus" name="" id="">
-            <option selected value="null" disabled>--- Vali -----</option>
+            <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="1">{{$t("answerKI.41")}}</option>
             <option value="2">{{$t("answerKI.42")}}</option>
             <option value="3">{{$t("answerKI.43")}}</option>
@@ -72,13 +72,13 @@
           <button @click="step = 3">{{$t("forward")}}</button></p>
     </section>
     <section v-if="step == 3">
-       <p>{{$t("questionKI.5")}}</p>
+       <p>{{$t("questionKI.6")}}</p>
        <p>
-          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktrcheck" type="radio" :value="true" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
           <label>{{$t("answerKI.55")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
+          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
+          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
+          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktrcheck" type="radio" :value="true" name="vastus.ktrcheck"></label></br>
+          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
       </p>
         <p v-if="vastus.krtcheck !== null">
           <button @click="saveData">{{$t("forward")}}</button>

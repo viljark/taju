@@ -7,6 +7,8 @@ let locales = {
     disagree: "Ei",
     dunno: "Ei tea",
     years: "aastat",
+    survey: "Küsimustik",
+    choose: "--- Vali ---",
     joke: {
       1: "Mees läks baari, tükk asfaldi kaenlas",
       2: "Kaks õlut!: ütles ta baaripidajale",
@@ -17,7 +19,7 @@ let locales = {
       1: "Kui märksid midagi tavatut, siis kas see liikus?",
       2: "Kui märkasid midagi tavatut, siis mis kujuga see oli?",  // päisesse tekst "Juhul kui sa midagi ei märganud, proovi vastusevariant ära arvata."
       3: "Kui märkasid midagi tavatut, siis mis värvi see oli?",
-      4: "Kui see liikus, siis mis suunas?",
+      4: "Kui märkasid midagi tavatut, siis mis suunas see liikus?",
       5: "Kui märkasid midagi tavatut, siis kas see oli ka üle-eelmises kastis?",
       6: "Kas oled varem sellist ülesannet teinud või tead mis fenomeni see test mõõdab?"
     },
@@ -32,7 +34,8 @@ let locales = {
       2: "Sugu",
       3: "Vali JAH - kui sul on normaalne nägemine või kandsid prille/ läätsi. Vali EI - kui peaksid kandma prille, kuid ei kandnud.",  //sõnastus
       4: "Haridus",
-      5: "Vali keskmine number"
+      5: "Vali keskmine number ja jäta see meelde, küsime kohe seda Sinult",
+      6: "Mis oli eelmisel see number mis pidid meelde jätma?"
     },
     questionTest: "Mis number oli keskmine?",
     answerIB: {
@@ -113,10 +116,13 @@ let locales = {
       1: "Ülesanne",
       2: "Järgmisel lehel kuvatakse sinu ette hall kast liikuvate pallidega. " +
       "Sinu ülesanne on kolme erineva suurusega pallide hulgast jälgida just sellise suurusega palle.",
-      3: "Sa pead lugema, mitu korda nad põrkuvad vastu kasti seinu. Katse lõpus küsitakse sinult seda numbrit."
+      3: "Sa pead lugema, mitu korda nad põrkuvad vastu kasti seinu. Katse lõpus küsitakse sinult põrgete arvu.",
+      4: "   < --- Loe SELLE suurusega pallide põrkeid!"
     },
     endspeech: {
-      1: "Täname, et osalesid tajukatses. "
+      1: "Täname, et osalesid tajukatses. ",
+      2: "Kui sul on selle eksperimendi kohta küsimusi või kommentaare võid pärida - andertamm@gmail.com",
+      3: "Ja ongi kõik."
     },
     informed: {
       1: "Informeeritud nõusolek",
@@ -124,8 +130,15 @@ let locales = {
       "suuruses objektide jälgmisel.",
       3: "See eksperiment nõuab Sinult 10 minutit Su aega",
       4: "Sa võid iga hetk katses osalemise katkestada.",
-      5: "See eksperiment viiakse läbi seminaritöö raames."
+      5: "See eksperiment viiakse läbi Tartu Ülikooli uurimustöö raames.",
+      6: "Ma nõustun selleks eksperimendis osalema."
+    },
+    perf: {
+      1: "Alustame!",
+      2: "Kuna tegemist on tähelepanu ja taju ülesandega, palun Sul seda katset teha ilma kõrvaliste segajateta.",
+      3: "Selleks, et katseprogramm veatult joosta saaks sulge palun üleliigsed programmid ja brauseri lisalehed/tab'id."
     }
+
 
     
 
@@ -140,6 +153,8 @@ let locales = {
     disagree: "No",
     dunno: "Don't know",
     years: "years",
+    survey: "Survey",
+    choose: "--- Choose ---",
     joke: {
       1: "Man went to a bar with a piece of tarmac under his arm.",
       2: "Two beers, please! ",
@@ -165,7 +180,8 @@ let locales = {
       2: "Gender",
       3: "Do you have normal or corrected-to-normal vision?",  //sõnastus
       4: "Education",
-      5: "Pick the middle number!"
+      5: "Pick the middle number and memorize it, it will be asked soon.",
+      6: "What was the number you had to memorize?"
     },
     questionTest: "Which was in the middle?",
     answerIB: {
@@ -245,19 +261,29 @@ let locales = {
       1: "Task",
       2: "In the next page you will be shown a grey box with moving and bouncing balls. " +
       "Your task is to follow this particular size of balls from three different sizes.",
-      3: "You have to count the bounces the balls with this particular size make from the walls of the box."
+      3: "You have to count the bounces the balls with this particular size make from the walls of the box.",
+      4: "   < --- Count the bounces of the balls with THIS size!"
     },
     endspeech: {
-      1: "Thank you for participating in this experiment. "
+      1: "Thank you for participating in this experiment. ",
+      2: "If you have any questions or comments about the experiment feel free to e-mail me at andertamm@gmail.com",
+      3: "This was it."
     },
     informed: {  // inglisekeelne informeeritud nõusolek
-      1: "Informeeritud nõusolek",
-      2: "Käesoleva eksperimendi eesmärk on uurida katseisiku tähelepanu ja taju erinevas" +
-      "suuruses objektide jälgmisel.",
-      3: "See eksperiment nõuab Sinult 10 minutit Su aega",
-      4: "Sa võid iga hetk katses osalemise katkestada.",
-      5: "See eksperiment viiakse läbi seminaritöö raames."
+      1: "Informed consent",
+      2: "The goal of this experiment is to study the perception and attention of the participant" +
+      " in following objects with different sizes.",
+      3: "This experiment takes 10 minutes of your time.",
+      4: "You can stop participating at any time.",
+      5: "This experiment is being conducted for a study done in Tartu University.",
+      6: "I agree to participate in this experiment"
+    },
+    perf: {
+      1: "Let's begin!",
+      2: "As we are studying perception and attention I would ask you to do this experiment without any prominent distractors.",
+      3: "For the program to function flawlessly please close any other programs and browser tabs."
     }
+
     
 
 

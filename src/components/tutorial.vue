@@ -4,7 +4,7 @@
     <p>{{$t("tutorial.2")}}</p>
     <p>{{$t("tutorial.3")}}</p>
     <div>
-      <span ref="ball" class="ball" :style="{width: ballSize, height: ballSize}"></span>
+      <p><span ref="ball" class="ball" :style="{width: ballSize, height: ballSize}"></span>{{$t("tutorial.4")}}</p>
     </div>
     <p>
       <button @click="next">{{$t("forward")}}</button>
