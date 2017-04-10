@@ -41,7 +41,7 @@
         this.y = height / 2;
         this.velX = -unit / 1.5;
         this.velY = 0;
-        this.color = "rgb(255, 0, 0)";
+        this.color = "#993333";
         this.size = size;
       }
 
