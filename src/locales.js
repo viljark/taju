@@ -20,8 +20,8 @@ let locales = {
       2: "Kui märkasid midagi tavatut, siis mis kujuga see oli?",  // päisesse tekst "Juhul kui sa midagi ei märganud, proovi vastusevariant ära arvata."
       3: "Kui märkasid midagi tavatut, siis mis värvi see oli?",
       4: "Kui märkasid midagi tavatut, siis mis suunas see liikus?",
-      5: "Kui märkasid midagi tavatut, siis kas see oli ka üle-eelmises kastis?",
-      6: "Kas oled varem sellist ülesannet teinud või tead mis fenomeni see test mõõdab?"
+      5: "Kas oled sellist ülesannet kunagi varem teinud?",
+      6: "Kas ootasid millegi tavatu ilmumist ette?"
     },
     questionRaal: {
       1: "Kas kasutad sülearvutit või lauaarvutit?",
@@ -35,7 +35,7 @@ let locales = {
       3: "Vali JAH - kui sul on normaalne nägemine või kandsid prille/ läätsi. Vali EI - kui peaksid kandma prille, kuid ei kandnud.",  //sõnastus
       4: "Haridus",
       5: "Vali keskmine number ja jäta see meelde, küsime kohe seda Sinult",
-      6: "Mis oli eelmisel see number mis pidid meelde jätma?"
+      6: "Mis oli eelmisel lehel see number mille pidid meelde jätma?"
     },
     questionTest: "Mis number oli keskmine?",
     answerIB: {
@@ -110,7 +110,8 @@ let locales = {
     alert: {
       1: "Mitu põrget lugesid?",
       2: "Väga hea. Jätkamiseks vajuta OK!",
-      3: "Su täpsus pole veel piisav. Suuname Su harjutusse tagasi, et saaksid veel proovida."
+      3: "Su täpsus pole veel piisav. Suuname Su harjutusse tagasi, et saaksid veel proovida.",
+      4: "Pallid põrkasid tegelikult "
     },
     tutorial: {
       1: "Ülesanne",
@@ -166,8 +167,8 @@ let locales = {
       2: "If you did notice something else, what shape was it",  // päisesse tekst "Juhul kui sa midagi ei märganud, proovi vastusevariant ära arvata."
       3: "If you did notice something else, what color was it? ",
       4: "If it was moving, what direction was it moving in? ",
-      5: "If you did notice something else, was it in the penultimate box?",
-      6: "Have you solved this kind of test before or know what kind of phenomen it may measure?"
+      5: "Have you solved this kind of test before?",
+      6: "Did you anticipate to see anything unexpected during the test?"
     },
     questionRaal: {
       1: "What type of device are you using to run this experiment?",
@@ -255,7 +256,8 @@ let locales = {
     alert: {
       1: "How many bounces did you count?",
       2: "Very good, press OK to continue.",
-      3: "Your accuracy wasn't enough. We'll get you back to the tutorial so you can try again."
+      3: "Your accuracy wasn't enough. We'll get you back to the tutorial so you can try again.",
+      4: "The balls bounced really in total "
     },
     tutorial: {
       1: "Task",

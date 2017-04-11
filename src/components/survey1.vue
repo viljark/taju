@@ -58,7 +58,7 @@
         </p>
         <p>{{$t("questionUes.5")}}</p>
         <p>
-          <select v-model="vastus.penultib" name="" id="">
+          <select v-model="vastus.teinud" name="" id="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerUes.51")}}</option>
             <option value="Ei">{{$t("answerUes.52")}}</option>
@@ -67,20 +67,17 @@
         </p>
         <p>{{$t("questionUes.6")}}</p>
         <p>
-          <select v-model="vastus.teab" name="" id="">
+          <select v-model="vastus.ootas" name="" id="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerUes.61")}}</option>
             <option value="Ei">{{$t("answerUes.62")}}</option>
           </select>
         </p>
         <p v-if="vastus.liikus !== null && vastus.kuju !== null && vastus.värv !== null 
-        && vastus.suund !== null && vastus.penultib !== null && vastus.teab !== null">
-          <button @click="step = 3">{{$t("forward")}}</button>
+        && vastus.suund !== null && vastus.teinud !== null && vastus.ootas !== null">
+          <button @click="saveData">{{$t("forward")}}</button>
         </p>
       </div>
-    </section>
-    <section v-if="step == 3">
-      <button @click="saveData">Salvesta</button>
     </section>
     <!--<p v-if="!visited">-->
     <!--<router-link :to="{name: 'run', params: {id: 4}}">-->
@@ -109,14 +106,14 @@
           kuju: null,
           värv: null,
           suund: null,
-          penultib: null,
-          teab: null
+          teinud: null,
+          ootas: null
         }
       }
     },
     created() {
-      console.log("have you been here", this.visited);
-      console.log("data", data.getData());
+    //  console.log("have you been here", this.visited);
+    //  console.log("data", data.getData());
     },
     methods: {
       saveData() {

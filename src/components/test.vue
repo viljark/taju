@@ -251,7 +251,7 @@
     methods: {
     },
     destroyed() {
-        console.log("destroyed");
+     //   console.log("destroyed");
         if (this.animation) {
           window.cancelAnimationFrame(this.animation);
         }

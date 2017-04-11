@@ -24,8 +24,8 @@
       }
     },
     created: function () {
-      console.log("route params", this.$route.params.id);
-
+      //console.log("route params", this.$route.params.id);
+      
       this.initModifiers()
 
       if (this.id === 3 || this.id === 6) {
@@ -43,8 +43,10 @@
         data.addRunData(runData);
 //      this.$t("hello") nii saab tõlkida
 
-        alert(this.$t("alert.2"));
-        console.log(this.id);
+        if (Math.abs(runData.collisionsCounted == runData.collisionsReal)) {
+          alert(runData.collisionsReal + " - " + this.$t("alert.2"));
+        } else {alert(this.$t("alert.4") + runData.collisionsReal + "x")};
+        // console.log(this.id);
         if (this.id === 6) {
           this.$router.push({name: 'survey1', params: {visited: true}});
           return;
@@ -57,9 +59,9 @@
         if (this.id === 3) {
           //remove current modifier from modifiers
           let index = modifiers.indexOf(this.currentModifier);
-          console.log("index is", index);
+          //console.log("index is", index);
           modifiers.splice(index, 1);
-          console.log("modifiers now", modifiers);
+          //console.log("modifiers now", modifiers);
           this.$router.push({name: 'survey1'});
         }
 
@@ -77,7 +79,7 @@
       },
       initModifiers() {
         this.currentModifier = this.getRandomModifier();
-        console.log("currentModifier", this.currentModifier)
+        //console.log("currentModifier", this.currentModifier)
 
         //change cross size here
         this.crossSize = this.currentModifier[3];

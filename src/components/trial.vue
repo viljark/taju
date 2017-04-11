@@ -22,9 +22,9 @@
     },
     methods: {
       parseTestResults(trialData) {
-        console.log("got data", trialData);
+      //  console.log("got data", trialData);
         let counted = trialData.collisionsCounted;
-        console.log("int counted", counted);
+      //  console.log("int counted", counted);
 
         if (Math.abs(trialData.collisionsCounted - trialData.collisionsReal) <= this.allowedMargin) {
           alert(this.$t("alert.2"));
