@@ -19,7 +19,7 @@
       }
     },
     created() {
-      console.log("data", data.getData());
+     // console.log("data", data.getData());
     },
     methods: {
     }

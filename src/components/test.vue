@@ -174,6 +174,7 @@
           balls3.push(new Ball(unit * modifiers[2]));
         }
         drawAllBalls(false);
+        console.log("pallide suurused: " + modifiers)
       }
 
       function showPrompt() {

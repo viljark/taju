@@ -21,7 +21,7 @@
   import {store} from "@/store";
   import uuid from "uuid";
 
-  console.log(store)
+  //console.log(store)
   export default {
     data () {
       return {
