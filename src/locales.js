@@ -131,7 +131,7 @@ let locales = {
       "suuruses objektide jälgmisel.",
       3: "See eksperiment nõuab Sinult 10 minutit Su aega",
       4: "Sa võid iga hetk katses osalemise katkestada.",
-      5: "See eksperiment viiakse läbi Tartu Ülikooli uurimustöö raames.",
+      5: "See eksperiment viiakse läbi Tartu Ülikooli seminaritöö raames.",
       6: "Ma nõustun selleks eksperimendis osalema."
     },
     perf: {
