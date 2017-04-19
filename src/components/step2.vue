@@ -3,7 +3,7 @@
     <h1>{{$t("perf.1")}}</h1>
     <p>{{$t("perf.2")}}</p>
     <p>{{$t("perf.3")}}</p>
-    </br>
+    <br>
     <router-link :to="{name: 'trial'}">
       <button >{{$t("forward")}}</button>
     </router-link>

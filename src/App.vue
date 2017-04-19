@@ -6,11 +6,16 @@
 
 <script>
   import screenfull from "screenfull";
+  import Vue from "vue";
+
   export default {
     name: 'app',
     data: function() {
         return {
         }
+    },
+    created() {
+      Vue.config.lang = localStorage.getItem("language") || "et";
     },
     mounted: function() {
       document.addEventListener("keydown", function (e) {

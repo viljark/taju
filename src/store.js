@@ -20,6 +20,7 @@ let store = {
 
     delete plain[".key"];
     plain.id = uuid.v4();
+    plain.userId = localStorage.getItem("userId");
     plain.date = new Date().toISOString();
 
     db.ref('answers/' + plain.id).set(plain)

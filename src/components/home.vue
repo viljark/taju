@@ -29,9 +29,13 @@
         language: "et"
       }
     },
+    mounted() {
+      this.language = Vue.config.lang;
+    },
     methods: {
       updateLanguage() {
         Vue.config.lang = this.language;
+        localStorage.setItem("language", this.language);
       },
       send() {
         let answer = {

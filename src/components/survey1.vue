@@ -20,7 +20,7 @@
       <div>
         <p>{{$t("questionUes.1")}}</p>
         <p>
-          <select v-model="vastus.liikus" name="" id="">
+          <select v-model="vastus.liikus" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="jah">{{$t("answerUes.11")}}</option>
             <option value="ei">{{$t("answerUes.12")}}</option>
@@ -28,7 +28,7 @@
         </p>
         <p>{{$t("questionUes.2")}}</p>
         <p>
-          <select v-model="vastus.kuju" name="" id="">
+          <select v-model="vastus.kuju" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Ruut">{{$t("answerUes.21")}}</option>
             <option value="Rist">{{$t("answerUes.22")}}</option>
@@ -38,7 +38,7 @@
         </p>
         <p>{{$t("questionUes.3")}}</p>
         <p>
-          <select v-model="vastus.värv" name="" id="">
+          <select v-model="vastus.värv" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Kollane">{{$t("answerUes.31")}}</option>
             <option value="Sinine">{{$t("answerUes.32")}}</option>
@@ -48,7 +48,7 @@
         </p>
         <p>{{$t("questionUes.4")}}</p>
         <p>
-          <select v-model="vastus.suund" name="" id="">
+          <select v-model="vastus.suund" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="alla">{{$t("answerUes.41")}}</option>
             <option value="üles">{{$t("answerUes.42")}}</option>
@@ -58,7 +58,7 @@
         </p>
         <p>{{$t("questionUes.5")}}</p>
         <p>
-          <select v-model="vastus.teinud" name="" id="">
+          <select v-model="vastus.teinud" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerUes.51")}}</option>
             <option value="Ei">{{$t("answerUes.52")}}</option>
@@ -67,13 +67,13 @@
         </p>
         <p>{{$t("questionUes.6")}}</p>
         <p>
-          <select v-model="vastus.ootas" name="" id="">
+          <select v-model="vastus.ootas" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerUes.61")}}</option>
             <option value="Ei">{{$t("answerUes.62")}}</option>
           </select>
         </p>
-        <p v-if="vastus.liikus !== null && vastus.kuju !== null && vastus.värv !== null 
+        <p v-if="vastus.liikus !== null && vastus.kuju !== null && vastus.värv !== null
         && vastus.suund !== null && vastus.teinud !== null && vastus.ootas !== null">
           <button @click="saveData">{{$t("forward")}}</button>
         </p>

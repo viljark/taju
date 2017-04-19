@@ -22,7 +22,7 @@
        </p>
         <p>{{$t("questionRaal.4")}}</p>
         <p>
-          <select v-model="vastus.widescreen" name="" id="">
+          <select v-model="vastus.widescreen" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerRaal.41")}}</option>
             <option value="Ei">{{$t("answerRaal.42")}}</option>
@@ -38,19 +38,19 @@
           <input v-model="vastus.KIAge" name="" value=""> {{$t("answerKI.11")}}
        </p>
        <p>{{$t("questionKI.2")}}</p>
-          <select v-model="vastus.gender" name="" id="">
+          <select v-model="vastus.gender" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Naine">{{$t("answerKI.21")}}</option>
             <option value="Mees">{{$t("answerKI.22")}}</option>
           </select>
        <p>{{$t("questionKI.3")}}</p>
-          <select v-model="vastus.vision" name="" id="">
+          <select v-model="vastus.vision" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerKI.31")}}</option>
             <option value="Ei">{{$t("answerKI.32")}}</option>
-          </select>       
+          </select>
        <p>{{$t("questionKI.4")}}</p>
-          <select v-model="vastus.haridus" name="" id="">
+          <select v-model="vastus.haridus" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="1">{{$t("answerKI.41")}}</option>
             <option value="2">{{$t("answerKI.42")}}</option>
@@ -58,14 +58,14 @@
             <option value="4">{{$t("answerKI.44")}}</option>
             <option value="5">{{$t("answerKI.45")}}</option>
             <option value="6">{{$t("answerKI.46")}}</option>
-          </select>     
+          </select>
        <p>{{$t("questionKI.5")}}</p>
        <p>
-          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label></br>   
-          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label></br>   
-          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktr" type="radio" :value="true" name="inputname"></label></br>   
-          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label></br>   
-          <label>{{$t("answerKI.55")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label></br>   
+          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
+          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
+          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktr" type="radio" :value="true" name="inputname"></label><br>
+          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
+          <label>{{$t("answerKI.55")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
       </p>
         <p v-if="vastus.KIAge !== null && vastus.gender !== null && vastus.vision !== null
           && vastus.haridus !== null  && vastus.ktr !== null">
@@ -74,23 +74,25 @@
     <section v-if="step == 3">
        <p>{{$t("questionKI.6")}}</p>
        <p>
-          <label>{{$t("answerKI.55")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktrcheck" type="radio" :value="true" name="vastus.ktrcheck"></label></br>
-          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label></br>
+          <label>{{$t("answerKI.55")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>
+          <label>{{$t("answerKI.54")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>
+          <label>{{$t("answerKI.51")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>
+          <label>{{$t("answerKI.53")}} <input v-model="vastus.ktrcheck" type="radio" :value="true" name="vastus.ktrcheck"></label><br>
+          <label>{{$t("answerKI.52")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>
       </p>
         <p v-if="vastus.krtcheck !== null">
           <button @click="saveData">{{$t("forward")}}</button>
         </p>
     </section>
+    <button @click="saveData">{{$t("forward")}}</button>
   </div>
-  
+
 </template>
 
 <script>
   import {data} from "@/userdata";
   import {store} from "@/store";
+  import Vue from "vue";
 
   export default {
     data () {
@@ -111,13 +113,13 @@
       }
     },
     created() {
-      console.log("data", data.getData());
+//      console.log("data", data.getData());
     },
     methods: {
         saveData() {
             data.addSurveyData(this.vastus, 3);
             var allData = data.getData();
-
+            allData.language = Vue.config.lang;
             store.addAnswer(allData);
             this.$router.push({name: 'end'});
         }

@@ -5,7 +5,7 @@
       <p>{{  $t("informed.3")  }}</p>
       <p>{{  $t("informed.4")  }}</p>
       <p>{{  $t("informed.5")  }}</p>
-      </br></br><hr>
+      <br><br><hr>
       <p>{{  $t("informed.6")  }}</p>
       <input type="checkbox" v-model="disableButton">
     <router-link to="/step2">
@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script>  
+<script>
   export default {
     data () {
       return {
