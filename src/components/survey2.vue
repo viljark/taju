@@ -84,7 +84,6 @@
           <button @click="saveData">{{$t("forward")}}</button>
         </p>
     </section>
-    <button @click="saveData">{{$t("forward")}}</button>
   </div>
 
 </template>
