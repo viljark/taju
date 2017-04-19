@@ -164,7 +164,7 @@
         ctx.fillRect(0, 0, width, height);
         while (balls1.length < 3) {
           let ball = new Ball(unit * modifiers[0]);
-          ball.counterVisible = true;
+          ball.counterVisible = false;
           balls1.push(ball);
         }
         while (balls2.length < 3) {

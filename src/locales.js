@@ -137,7 +137,8 @@ let locales = {
     perf: {
       1: "Alustame!",
       2: "Kuna tegemist on tähelepanu ja taju ülesandega, palun Sul seda katset teha ilma kõrvaliste segajateta.",
-      3: "Selleks, et katseprogramm veatult joosta saaks sulge palun üleliigsed programmid ja brauseri lisalehed/tab'id."
+      3: "Selleks, et katseprogramm veatult joosta saaks sulge palun üleliigsed programmid ja brauseri lisalehed/tab'id.",
+      4: "Alustuseks teeme prooviülesande. Sellega saad harjutada ülesande lahendamist."
     }
 
 
@@ -283,7 +284,8 @@ let locales = {
     perf: {
       1: "Let's begin!",
       2: "As we are studying perception and attention I would ask you to do this experiment without any prominent distractors.",
-      3: "For the program to function flawlessly please close any other programs and browser tabs."
+      3: "For the program to function flawlessly please close any other programs and browser tabs.",
+      4: "Start with a practice task. The first one is for you to practice counting."
     }
 
     
