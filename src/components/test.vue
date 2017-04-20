@@ -26,6 +26,7 @@
       var width = canvas.width = height * 1.2;
       var unit = Math.floor(height / 100);
 
+      var speedUnit = unit / 1.7;
       // function to generate random number
 
       function random(min, max) {
@@ -38,6 +39,7 @@
       function Thing(size) {
         this.x = width;
         this.y = height / 2;
+        this.velX = -unit / 1.7;
         this.velY = 0;
         this.color = "#993333";
         this.size = size;
