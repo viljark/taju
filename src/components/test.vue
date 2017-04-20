@@ -26,7 +26,6 @@
       var width = canvas.width = height * 1.2;
       var unit = Math.floor(height / 100);
 
-      var speedUnit = unit / 2;
       // function to generate random number
 
       function random(min, max) {
@@ -39,7 +38,6 @@
       function Thing(size) {
         this.x = width;
         this.y = height / 2;
-        this.velX = -unit / 1.5;
         this.velY = 0;
         this.color = "#993333";
         this.size = size;
@@ -225,7 +223,7 @@
         var trialCurrentTime = new Date().getTime();
 
         //draw cross under the circles
-        if ((cross) && (trialCurrentTime - trialStartTime >= 1000)) {
+        if ((cross) && (trialCurrentTime - trialStartTime >= 2000)) {
           thing.draw();
           thing.update();
         }
