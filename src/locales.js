@@ -9,6 +9,10 @@ let locales = {
     years: "aastat",
     survey: "Küsimustik",
     choose: "--- Vali ---",
+    share: {
+      1: "jaga Facebook'is!",
+      2: "Kui sulle meeldis see eksperiment ja tahaksid aidata, siis "
+    },
     joke: {
       1: "Mees läks baari, tükk asfaldi kaenlas",
       2: "Kaks õlut!: ütles ta baaripidajale",
@@ -138,7 +142,8 @@ let locales = {
       1: "Alustame!",
       2: "Kuna tegemist on tähelepanu ja taju ülesandega, palun Sul seda katset teha ilma kõrvaliste segajateta.",
       3: "Selleks, et katseprogramm veatult joosta saaks sulge palun üleliigsed programmid ja brauseri lisalehed/tab'id.",
-      4: "Alustuseks teeme prooviülesande. Sellega saad harjutada ülesande lahendamist."
+      4: "Kui peaksid kandma prille, siis palun pane need ette",
+      5: "Alustuseks teeme prooviülesande. Sellega saad harjutada ülesande lahendamist."
     }
 
 
@@ -157,6 +162,10 @@ let locales = {
     years: "years",
     survey: "Survey",
     choose: "--- Choose ---",
+    share: {
+      1: "share on Facebook!",
+      2: "If you liked this experiment and want to help then - "
+    },
     joke: {
       1: "Man went to a bar with a piece of tarmac under his arm.",
       2: "Two beers, please! ",
@@ -285,7 +294,8 @@ let locales = {
       1: "Let's begin!",
       2: "As we are studying perception and attention I would ask you to do this experiment without any prominent distractors.",
       3: "For the program to function flawlessly please close any other programs and browser tabs.",
-      4: "Start with a practice task. The first one is for you to practice counting."
+      4: "If you should wear glasses, then please put them on",
+      5: "We'll start with a practice task. The first one is for you to practice counting."
     }
 
     

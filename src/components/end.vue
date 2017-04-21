@@ -4,6 +4,7 @@
     <p>{{$t("endspeech.1")}}</p>
     <img src="https://www.colourbox.com/preview/2630929-black-and-white-picture-retro-bow-with-a-handkerchief.jpg" alt="Deep bow" style="width:30%;">
     <p>{{$t("endspeech.2")}}</p>
+    <p>{{$t("share.2")}} <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftaju-ca821.firebaseapp.com%2F&amp;src=sdkpreparse"> {{$t("share.1")}} </a></p>
   </div>
 </template>
 
