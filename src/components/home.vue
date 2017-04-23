@@ -8,6 +8,8 @@
         <option value="en">English</option>
       </select>
     </label>
+    <h5>{{$t("nophone")}}
+    </h5>
     <p>
       <router-link to="/step1">
         <button >{{$t("forward")}}</button>

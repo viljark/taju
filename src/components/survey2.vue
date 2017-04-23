@@ -2,7 +2,7 @@
   <div>
     <h1>{{$t("survey")}}</h1>
     <section v-if="step == 1">
-        <p>{{$t("questionRaal.1")}}</p>
+        <p>{{$t("questionRaal.1")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.device" name="" id="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -12,15 +12,15 @@
             <option value="Tahvelarvuti">{{$t("answerRaal.14")}}</option>
           </select>
         </p>
-        <p>{{$t("questionRaal.2")}}</p>
+        <p>{{$t("questionRaal.2")}}<font color="red">*</font></p>
         <p>
           <input v-model="vastus.deviceAge" name="" value=""> {{$t("answerRaal.21")}}
        </p>
-        <p>{{$t("questionRaal.3")}}</p>
+        <p>{{$t("questionRaal.3")}}<font color="red">*</font></p>
         <p>
           <input v-model="vastus.diagonal" name="" value=""> {{$t("answerRaal.31")}}
        </p>
-        <p>{{$t("questionRaal.4")}}</p>
+        <p>{{$t("questionRaal.4")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.widescreen" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -33,23 +33,23 @@
       </p>
     </section>
     <section v-if="step == 2">
-        <p>{{$t("questionKI.1")}}</p>
+        <p>{{$t("questionKI.1")}}<font color="red">*</font></p>
         <p>
           <input v-model="vastus.KIAge" name="" value=""> {{$t("answerKI.11")}}
        </p>
-       <p>{{$t("questionKI.2")}}</p>
+       <p>{{$t("questionKI.2")}}<font color="red">*</font></p>
           <select v-model="vastus.gender" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Naine">{{$t("answerKI.21")}}</option>
             <option value="Mees">{{$t("answerKI.22")}}</option>
           </select>
-       <p>{{$t("questionKI.3")}}</p>
+       <p>{{$t("questionKI.3")}}<font color="red">*</font></p>
           <select v-model="vastus.vision" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="Jah">{{$t("answerKI.31")}}</option>
             <option value="Ei">{{$t("answerKI.32")}}</option>
           </select>
-       <p>{{$t("questionKI.4")}}</p>
+       <p>{{$t("questionKI.4")}}<font color="red">*</font></p>
           <select v-model="vastus.haridus" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
             <option value="1">{{$t("answerKI.41")}}</option>
@@ -59,7 +59,7 @@
             <option value="5">{{$t("answerKI.45")}}</option>
             <option value="6">{{$t("answerKI.46")}}</option>
           </select>
-       <p>{{$t("questionKI.5")}}</p>
+       <p>{{$t("questionKI.5")}}<font color="red">*</font></p>
        <p>
           <label>{{$t("answerKI.51")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
           <label>{{$t("answerKI.52")}} <input v-model="vastus.ktr" type="radio" :value="false" name="inputname"></label><br>
@@ -72,7 +72,7 @@
           <button @click="step = 3">{{$t("forward")}}</button></p>
     </section>
     <section v-if="step == 3">
-       <p>{{$t("questionKI.6")}}</p>
+       <p>{{$t("questionKI.6")}}<font color="red">*</font></p>
        <p>
           <label>{{$t("answerKI.55")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>
           <label>{{$t("answerKI.54")}} <input v-model="vastus.ktrcheck" type="radio" :value="false" name="vastus.ktrcheck"></label><br>

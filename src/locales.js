@@ -9,6 +9,7 @@ let locales = {
     years: "aastat",
     survey: "Küsimustik",
     choose: "--- Vali ---",
+    nophone: "Ole hea ja tee antud eksperiment arvutiga, mobiiltelefoni ja tahvelarvuti ekraan jääb väikeseks.",
     share: {
       1: "jaga Facebook'is!",
       2: "Kui sulle meeldis see eksperiment ja tahaksid aidata, siis "
@@ -162,6 +163,7 @@ let locales = {
     years: "years",
     survey: "Survey",
     choose: "--- Choose ---",
+    nophone: "Please complete the experiment on a desktop computer or on a laptop. Smartphones and tablets don't have the screensize to display the experiment properly.",
     share: {
       1: "share on Facebook!",
       2: "If you liked this experiment and want to help then - "

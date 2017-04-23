@@ -2,7 +2,7 @@
   <div>
     <h1>{{$t("survey")}}</h1>
     <section v-if="step == 1">
-      <h2>{{$t("questionIB")}}</h2>
+      <h2>{{$t("questionIB")}}<font color="red">*</font></h2>
       <p>
         <label>{{$t("agree")}} <input v-model="vastus.ib" type="radio" :value="true" name="vastus.ib"></label>
       </p>
@@ -18,7 +18,7 @@
       <h2 v-if="!vastus.ib">{{$t("sawitnot")}}</h2>
 
       <div>
-        <p>{{$t("questionUes.1")}}</p>
+        <p>{{$t("questionUes.1")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.liikus" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -26,7 +26,7 @@
             <option value="ei">{{$t("answerUes.12")}}</option>
           </select>
         </p>
-        <p>{{$t("questionUes.2")}}</p>
+        <p>{{$t("questionUes.2")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.kuju" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -36,7 +36,7 @@
             <option value="Kastekann">{{$t("answerUes.24")}}</option>
           </select>
         </p>
-        <p>{{$t("questionUes.3")}}</p>
+        <p>{{$t("questionUes.3")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.värv" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -46,7 +46,7 @@
             <option value="Valge">{{$t("answerUes.34")}}</option>
           </select>
         </p>
-        <p>{{$t("questionUes.4")}}</p>
+        <p>{{$t("questionUes.4")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.suund" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -56,7 +56,7 @@
             <option value="vasakule">{{$t("answerUes.44")}}</option>
           </select>
         </p>
-        <p>{{$t("questionUes.5")}}</p>
+        <p>{{$t("questionUes.5")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.teinud" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
@@ -65,7 +65,7 @@
             <option value="Ei mäleta">{{$t("answerUes.53")}}</option>
           </select>
         </p>
-        <p>{{$t("questionUes.6")}}</p>
+        <p>{{$t("questionUes.6")}}<font color="red">*</font></p>
         <p>
           <select v-model="vastus.ootas" name="">
             <option selected value="null" disabled>{{$t("choose")}}</option>
