@@ -132,9 +132,9 @@ let locales = {
     },
     informed: {
       1: "Informeeritud nõusolek",
-      2: "Käesoleva eksperimendi eesmärk on uurida katseisiku tähelepanu ja taju erinevas" +
+      2: "Käesoleva eksperimendi eesmärk on uurida katseisiku tähelepanu ja taju erinevas " +
       "suuruses objektide jälgmisel.",
-      3: "See eksperiment nõuab Sinult 10 minutit Su aega",
+      3: "Selle eksperimendi tegemine võtab 5-7 minutit aega",
       4: "Sa võid iga hetk katses osalemise katkestada.",
       5: "See eksperiment viiakse läbi Tartu Ülikooli seminaritöö raames.",
       6: "Ma nõustun selleks eksperimendis osalema."
@@ -287,7 +287,7 @@ let locales = {
       1: "Informed consent",
       2: "The goal of this experiment is to study the perception and attention of the participant" +
       " in following objects with different sizes.",
-      3: "This experiment takes 10 minutes of your time.",
+      3: "This experiment takes 5-7 minutes to complete.",
       4: "You can stop participating at any time.",
       5: "This experiment is being conducted for a study done in Tartu University.",
       6: "I agree to participate in this experiment"
