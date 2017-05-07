@@ -137,7 +137,8 @@ let locales = {
       3: "Selle eksperimendi tegemine võtab 5-7 minutit aega",
       4: "Sa võid iga hetk katses osalemise katkestada.",
       5: "See eksperiment viiakse läbi Tartu Ülikooli seminaritöö raames.",
-      6: "Ma nõustun selleks eksperimendis osalema."
+      6: "Ma nõustun selleks eksperimendis osalema.",
+      7: "Kogutud andmed on anonüümsed ja neid ei ole võimalik isikuga kokku viia."
     },
     perf: {
       1: "Alustame!",
@@ -290,7 +291,8 @@ let locales = {
       3: "This experiment takes 5-7 minutes to complete.",
       4: "You can stop participating at any time.",
       5: "This experiment is being conducted for a study done in Tartu University.",
-      6: "I agree to participate in this experiment"
+      6: "I agree to participate in this experiment",
+      7: "Gathered data is anonymous and can not be paired with the person."
     },
     perf: {
       1: "Let's begin!",

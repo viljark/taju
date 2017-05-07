@@ -2,6 +2,7 @@
   <div>
     <h1>{{  $t("informed.1")  }}</h1>
       <p>{{  $t("informed.2")  }}</p>
+      <p>{{  $t("informed.7")  }}</p>
       <p>{{  $t("informed.3")  }}</p>
       <p>{{  $t("informed.4")  }}</p>
       <p>{{  $t("informed.5")  }}</p>
